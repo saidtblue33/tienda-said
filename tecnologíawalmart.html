@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - Tienda Walmart</title>
+    <style>
+        /* ESTILOS GENERALES */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f8fd;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+        }
+        /* NOMBRE DE LA TIENDA */
+        .nombre-tienda {
+            background-color: #004f9a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin: -20px -20px 25px -20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        /* ENCABEZADO */
+        header {
+            text-align: center;
+            background-color: #0071ce;
+            color: white;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+        }
+        header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin: 10px;
+        }
+        header p {
+            color: white;
+            font-size: 1.1rem;
+        }
+        /* CONTENEDOR DE PRODUCTOS */
+        .contenedor-menu {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* TARJETAS */
+        .tarjeta-producto {
+            background-color: white;
+            border: 1px solid #d5e6f7;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .tarjeta-producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+        }
+        /* IMÁGENES */
+        .imagen-producto {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        /* TÍTULOS */
+        .tarjeta-producto h2 {
+            font-size: 1.4rem;
+            color: #0071ce;
+            margin-bottom: 10px;
+        }
+        /* DESCRIPCIÓN */
+        .tarjeta-producto p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        /* PRECIO */
+        .precio {
+            color: #0071ce !important;
+            font-size: 1.6rem !important;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        /* BOTONES */
+        .boton-producto {
+            display: block;
+            background-color: #ffc220;
+            color: #222;
+            padding: 13px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        .boton-producto:hover {
+            background-color: #f0b400;
+        }
+        /* PIE DE PÁGINA */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #004f9a;
+            color: white;
+            border-radius: 10px;
+        }
+        footer p {
+            margin: 8px;
+        }
+        /* TABLETAS */
+        @media (max-width: 900px) {
+            .contenedor-menu {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        /* CELULARES */
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            .nombre-tienda {
+                margin: -12px -12px 20px -12px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .contenedor-menu {
+                grid-template-columns: 1fr;
+            }
+            .imagen-producto {
+                height: 210px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NOMBRE DE LA TIENDA -->
+    <div class="nombre-tienda">
+        Walmart 🛒 | Todo para tu hogar
+    </div>
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header>
+        <h1>🛍️ Tecnología y Entretenimiento</h1>
+        <p>
+            Encuentra tus productos favoritos al mejor precio.
+            ¡Calidad y tecnología para ti!
+        </p>
+    </header>
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <main class="contenedor-menu">
+        <!-- PRODUCTO 1: FREIDORA -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="freidora de arire.jfif"
+                    alt="Freidora de aire"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Freidora+de+Aire';"
+                >
+                <h2>Freidora de Aire</h2>
+                <p>
+                    Cocina de forma práctica con aire caliente.
+                    Ideal para preparar papas, verduras y pollo.
+                </p>
+                <p class="precio">$790 MXN</p>
+                <p>Capacidad aproximada: 3 litros.</p>
+            </div>
+            <a href="https://share.google/TDh28oPO6NhZxCvH3" class="boton-producto" >
+                Ver producto
+            </a>
+        </div>
+        <!-- PRODUCTO 2: BOCINA JBL -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80"
+                    alt="Bocina portátil"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Bocina+JBL';"
+                >
+                <h2>Bocina JBL</h2>
+                <p>
+                    Disfruta tu música favorita con sonido
+                    potente y conexión Bluetooth.
+                </p>
+                <p class="precio">$1,199 MXN</p>
+                <p>Conexión Bluetooth y diseño portátil.</p>
+            </div>
+            <a href="https://share.google/0tvq8T7DjPJTp0nUU" class="boton-producto">
+                Ver producto
+            </a>
+        </div>
+        <!-- PRODUCTO 3: TELEVISIÓN -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=80"
+                    alt="Televisión inteligente"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Television';"
+                >
+                <h2>Televisión Smart TV</h2>
+                <p>
+                    Disfruta películas, series y tus programas
+                    favoritos en una pantalla de alta definición.
+                </p>
+                <p class="precio">$4,999 MXN</p>
+                <p>Pantalla de 55 pulgadas.</p>
+            </div>
+            <a href="https://share.google/zknp40UqGHDnZDlnI" class="boton-producto">
+                Ver producto
+            </a>
+        </div>
+        <!-- PRODUCTO 4: CELULAR -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80"
+                    alt="Teléfono celular"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Celular';"
+                >
+                <h2>OPPO Find X9 Ultra</h2>
+                <p>
+                    Mantente conectado con tus amigos y familiares.
+                    Toma fotografías y utiliza tus aplicaciones favoritas.
+                </p>
+                <p class="precio">$12,999 MXN</p>
+                <p>128 GB de almacenamiento.</p>
+            </div>
+            <a href="https://share.google/akfWQRH9zFF8YfmXE" class="boton-producto">
+                Ver producto
+            </a>
+        </div>
+        <!-- PRODUCTO 5: COMPUTADORA -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+                    alt="Computadora portátil"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Computadora';"
+                >
+                <h2>Lenovo ThinkPad X9 Aura Edition</h2>
+                <p>
+                    Ideal para estudiar, trabajar, realizar tareas
+                    y disfrutar de tus contenidos favoritos.
+                </p>
+                <p class="precio">$23,999 MXN</p>
+                <p>Computadora portátil para tus actividades diarias.</p>
+            </div>
+            <a href="https://share.google/5VTDVOFzI5c9OFzV0" class="boton-producto">
+                Ver producto
+            </a>
+        </div>
+    </main>
+ <div>
+    <a href="index.html" class="botones">
+        Volver al menú
+    </a>
+ </div>
+</body>
+</html>

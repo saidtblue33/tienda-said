@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compras en línea - Walmart</title>
+    
+    <!-- ======================================================= -->
+    <!-- ESTILOS CSS: Controlamos la apariencia y la cuadrícula  -->
+    <!-- ======================================================= -->
+    <style>
+        /* Estilos generales para toda la página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #027df8; /* Color de fondo claro y moderno */
+            color: #1e293b;            /* Color del texto principal */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Encabezado principal del sitio */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: #ffffff; /* Color rojo/rosa para destacar el título */
+            font-size: 2.5rem;
+            margin-bottom: 10px;    
+        }
+
+        header p {
+            color: #ffffff; /* Texto de subtítulo más tenue */
+            font-size: 1.1rem;
+        }
+
+        /* ======================================================= */
+        <!-- CUADRÍCULA DE TARJETAS (Grid System)                   -->
+        /* ======================================================= */
+        .contenedor-menu {
+            display: grid;
+            /* Crea columnas flexibles: en pantallas grandes habrá varias, en celulares solo 1 */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;            /* Separación entre cada tarjeta de receta */
+            max-width: 1100px;     /* Ancho máximo del menú para que no se estire demasiado */
+            margin: 0 auto;        /* Centra el contenedor en la pantalla */
+        }
+
+        /* Diseña la caja/tarjeta de cada receta */
+        .tarjeta-receta {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Efecto al pasar el mouse sobre la tarjeta (Se eleva ligeramente) */
+        .tarjeta-receta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Icono o emoji representativo de la receta */
+        .emoji-receta {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Título de la receta dentro de la tarjeta */
+        .tarjeta-receta h2 {
+            font-size: 1.4rem;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        /* Pequeña descripción de la receta */
+        .tarjeta-receta p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* ======================================================= */
+        /* ======================================================= */
+        .boton-receta {
+            display: inline-block;
+            background-color: #027df8; /* Color de fondo del botón */
+            color: #ffffff;            /* Color del texto del botón */
+            padding: 12px 20px;
+            border-radius: 8px;        /* Esquinas redondeadas */
+            text-decoration: none;     /* Quita el subrayado por defecto de los enlaces */
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Efecto al pasar el mouse sobre el botón */
+        .boton-receta:hover {
+            background-color: #1377d4b7; /* Tono de rojo más oscuro al hacer hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======================================================= -->
+    <!-- ENCABEZADO DE LA PÁGINA PRINCIPAL                       -->
+    <!-- ======================================================= -->
+    <header>
+        <h1>
+            <img src="logo walmart.png" width="50" height="50">
+            Walmart
+        </h1>
+        <p>Selecciona una sección del menú para ver los productos disponibles.</p>
+    </header>
+
+    <!-- ======================================================= -->
+    <!-- CONTENEDOR CON LAS 4 TARJETAS Y SUS BOTONES             -->
+    <!-- ======================================================= -->
+    <main class="contenedor-menu">
+
+        <!-- BOTÓN / TARJETA 1 -->
+        <div class="tarjeta-receta">
+            <div>
+                <h2>
+                 <img src="tecnología wañlmart.jpg" width="1050" height="540">
+                 <div>Tecnología</div>
+                </h2>
+            </div>
+            <!-- Cambia 'receta1.html' por el nombre real de tu archivo de la primera receta -->
+            <a href="tecnologíawalmart.html" class="boton-receta">Ver sitio</a>
+        </div>
+
+        <!-- BOTÓN / TARJETA 2 -->
+        <div class="tarjeta-receta">
+            <div>
+                <h2>
+                    <img src="ropa walmart.jfif" width="1050" height="540">
+                    <div>Ropa</div>
+                </h2>
+            </div>
+            <!-- Cambia 'receta2.html' por el nombre real de tu archivo de la segunda receta -->
+            <a href="ropawalmart.html" class="boton-receta">Ver sitio</a>
+        </div>
+
+        <!-- BOTÓN / TARJETA 3 -->
+        <div class="tarjeta-receta">
+            <div>
+                <h2>
+                    <img src="entretenimiento walmart.webp" width="1050" height="540">
+                    <div>Entretenimiento</div>
+                </h2>
+            </div>
+            <!-- Cambia 'receta3.html' por el nombre real de tu archivo de la tercera receta -->
+            <a href="tecnologíawalmart.html" class="boton-receta">Ver sitio</a>
+        </div>
+    </main>
+
+</body>
+</html>

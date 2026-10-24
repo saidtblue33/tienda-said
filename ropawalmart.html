@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - Tienda Walmart</title>
+    <style>
+        /* ESTILOS GENERALES */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f8fd;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+        }
+        /* NOMBRE DE LA TIENDA */
+        .nombre-tienda {
+            background-color: #004f9a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin: -20px -20px 25px -20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        /* ENCABEZADO */
+        header {
+            text-align: center;
+            background-color: #0071ce;
+            color: white;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+        }
+        header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin: 10px;
+        }
+        header p {
+            color: white;
+            font-size: 1.1rem;
+        }
+        /* CONTENEDOR DE PRODUCTOS */
+        .contenedor-menu {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* TARJETAS */
+        .tarjeta-producto {
+            background-color: white;
+            border: 1px solid #d5e6f7;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .tarjeta-producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+        }
+        /* IMÁGENES */
+        .imagen-producto {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        /* TÍTULOS */
+        .tarjeta-producto h2 {
+            font-size: 1.4rem;
+            color: #0071ce;
+            margin-bottom: 10px;
+        }
+        /* DESCRIPCIÓN */
+        .tarjeta-producto p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        /* PRECIO */
+        .precio {
+            color: #0071ce !important;
+            font-size: 1.6rem !important;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        /* BOTONES */
+        .boton-producto {
+            display: block;
+            background-color: #ffc220;
+            color: #222;
+            padding: 13px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        .boton-producto:hover {
+            background-color: #f0b400;
+        }
+        /* PIE DE PÁGINA */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #004f9a;
+            color: white;
+            border-radius: 10px;
+        }
+        footer p {
+            margin: 8px;
+        }
+        /* TABLETAS */
+        @media (max-width: 900px) {
+            .contenedor-menu {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        /* CELULARES */
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            .nombre-tienda {
+                margin: -12px -12px 20px -12px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .contenedor-menu {
+                grid-template-columns: 1fr;
+            }
+            .imagen-producto {
+                height: 210px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NOMBRE DE LA TIENDA -->
+    <div class="nombre-tienda">
+        Walmart 🛒 | Todo para tu hogar
+    </div>
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header>
+        <h1>👗 Ropa de temporada</h1>
+        <p>
+            Encuentra tus productos favoritos al mejor precio.
+            ¡Calidad y comodidad para ti!
+        </p>
+    </header>
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <main class="contenedor-menu">
+        <!-- PRODUCTO 1: FREIDORA -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="vestido walmart.jpg"
+                    alt="Freidora de aire"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Freidora+de+Aire';"
+                >
+                <h2>Vestido Yellow Ruffle Chiffon Maxi Dress with Slit</h2>
+                <p>
+                    Presenta un pronunciado escote en "V" adornado con volantes vaporosos en capas y tirantes delgados estilo espagueti que enmarcan la zona superior con mucha feminidad.
+                </p>
+                <p class="precio">$680 MXN</p>
+                <p>Tallas disponibles: XS, S, M, L y XL</p>
+            </div>
+            <a href="https://share.google/8O0iC1Mh3fpFQInhs" class="boton-producto" >
+                Ver producto
+            </a>
+        </div>
+        <!-- PRODUCTO 2: BOCINA JBL -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="camisa walmart azul.jfif"
+                    alt="Bocina portátil"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Bocina+JBL';"
+                >
+                <h2>Camisa de vestir clásica Azul (caballero)</h2>
+                <p>
+                    Cuenta con manga larga, cuello rígido estructurado, abotonadura frontal completa y puños ajustables.
+                </p>
+                <p class="precio">$220 MXN</p>
+                <p>Tallas disponibles: XS, S, M, L y XL</p>
+            </div>
+            <a href="https://share.google/rmGh9IN8TOlfH3AeX" class="boton-producto">
+                Ver producto
+            </a>
+        </div>
+        <!-- PRODUCTO 3: TELEVISIÓN -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="oberol walmart.jfif"
+                    alt="Televisión inteligente"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Television';"
+                >
+                <h2>Overol de mezclilla para niños 5 - 8 años</h2>
+                <p>
+                   Incluye tirantes ajustables con hebillas o botones metálicos para adaptarnos al crecimiento del niño, talle con bolsillos en el pecho, laterales y traseros, y broches en los costados para vestir fácil.
+                </p>
+                <p class="precio">$540 MXN</p>
+                <p>Tallas disponibles: XS, S, M, L y XL</p>
+            </div>
+            <a href="https://share.google/eDmZvAbZSXKWSBVwY" class="boton-producto">
+                Ver producto
+            </a>
+        </div>
+        <!-- PRODUCTO 4: CELULAR -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="botas walmart para niña.jfif"
+                    alt="Teléfono celular"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Celular';"
+                >
+                <h2>Botas tobilleras de gamuza con borreguito</h2>
+                <p>
+Son botas cortas estilo pantubota en color beige/topo, confeccionadas en gamuza exterior con un cálido forro de pelo sintético (fluff) en el cuello y suela plana de goma ligera.                </p>
+                <p class="precio">$499 MXN</p>
+                <p>Tallas disponibles: 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24</p>
+            </div>
+            <a href="https://share.google/3Q8udFOFs3F9pmVW8" class="boton-producto">
+                Ver producto
+            </a>
+        </div>
+        <!-- PRODUCTO 5: COMPUTADORA -->
+        <div class="tarjeta-producto">
+            <div>
+                <img
+                    class="imagen-producto"
+                    src="traje spiderman walmart.jfif"
+                    alt="Computadora portátil"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x250/f2f8fd/0071ce?text=Computadora';"
+                >
+                <h2>Traje para bebés del Hombre Araña</h2>
+                <p>
+                    Diseñado como una sola pieza de manga larga, simula la clásica vestimenta del superhéroe en tonos rojo y negro con la emblemática araña en el pecho y un estampado de telarañas.
+                </p>
+                <p class="precio">$340 MXN</p>
+                <p>Tallas disponibles: 0 - 24 meses</p>
+            </div>
+            <a href="https://share.google/0L2FzqZ2IH61Urtms" class="boton-producto">
+                Ver producto
+            </a>
+        </div>
+    </main>
+ <div>
+    <a href="index.html" class="botones">
+        Volver al menú
+    </a>
+ </div>
+</body>
+</html>
